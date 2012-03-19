@@ -1,3 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 
+html {
+	
+	height: auto;
+	width: 800px;
+	
+}
+
+body {
+	
+	background-color:#CC9
+	
+}
+
