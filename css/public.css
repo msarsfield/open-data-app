@@ -2,7 +2,7 @@
 /* CSS Document */
 
 html {
-	
+	display:list-item;
 	height: auto;
 	width: 800px;
 	
@@ -10,7 +10,9 @@ html {
 
 body {
 	
-	background-color:#CC9
+	background-color:#cCcC99
 	
 }
+
+
 
