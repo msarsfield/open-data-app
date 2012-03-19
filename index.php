@@ -24,9 +24,22 @@ $results = $db->query('
 		<li>
 			<a href="single.php?id=<?php echo $garden['id']; ?>"><?php echo $garden['name']; ?></a>
 		</li>
+        
+        
+       
+       
+
+              
 	<?php endforeach; ?>
     
 	</ul>
 	
 </body>
 </html>
+
+<?
+$total_ratings = (3+2+3+1+5+2+3);
+$total_votes = 7;
+$average = $total_ratings / $total_votes;
+print("The average rating for this gardent is: ");
+?>
