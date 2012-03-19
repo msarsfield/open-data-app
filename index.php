@@ -12,7 +12,7 @@ $results = $db->query('
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Gardens</title>
+	<title>Community Gardens of Ottawa</title>
 	<link href="css/public.css" rel="stylesheet">
 	<script src="js/modernizr.js"></script>
 </head>
