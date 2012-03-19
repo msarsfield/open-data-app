@@ -2,6 +2,11 @@
 /* CSS Document */
 
 
-body {
-	background-color: #9C0;	
+html  {
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	background-image:url(../design-brief/images/new-sxc-lotus_head_220530_6371.jpg);
+	
 }

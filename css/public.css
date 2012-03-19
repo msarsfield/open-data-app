@@ -1,12 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
+/* CAREFULL NOT TO MIX THIS ONE UP WITH THE ADMIN FILE*/
 
 html {
 	display:list-item;
-	list-style:cjk-ideographic;
+	list-style:cjk-ideographic;/*whatever that means... just having fun with it*/
 	height: auto;
 	width: 800px;
-	background-color:#99CC33;
+	background-image:
 	
 }
 
