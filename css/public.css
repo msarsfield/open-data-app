@@ -3,14 +3,10 @@
 
 html {
 	display:list-item;
+	list-style:cjk-ideographic;
 	height: auto;
 	width: 800px;
-	
-}
-
-body {
-	
-	background-color:#cCcC99
+	background-color:#99CC33;
 	
 }
 
