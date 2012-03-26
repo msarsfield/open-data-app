@@ -1,5 +1,12 @@
 <?php
 
+
+require_once '../includes/users.php';
+	if (!user_is_signed_in()) {
+	header('Location: ../includes/sign-in.php');
+	exit;
+}
+
 require_once '../includes/db.php';
 
 $results = $db->query('
@@ -18,6 +25,8 @@ $results = $db->query('
 </head>
 <body>
 	
+    <a href="../includes/sign-out.php">Sign Out</a>
+    
     <a href="add.php">Add a Garden</a>
     
 	<ul>
@@ -29,7 +38,8 @@ $results = $db->query('
 			<a href="delete.php?id=<?php echo $garden['id']; ?>">Delete</a>
 		</li>
 	<?php endforeach; ?>
-    
+   
+   
 	</ul>
 	
 </body>

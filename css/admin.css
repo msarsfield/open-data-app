@@ -1,3 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+html  {
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+/*	background-image:url(../design-brief/images/new-sxc-lotus_head_220530_6371.jpg);*/
+	background-color: rgba(153,204,102,.25);
+	font-family:"Lucida Console", Monaco, monospace;
+	
+
+	
+	
+	
+}
