@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html {
+	background-color: #D8E29A;	
+	margin: 0 auto;
+	width: 1000px;
+}
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:1em;
+	padding: 0 70px;/* gives the space between the text and the background pattern*/
+	background: url(../images/new-sxc-lotus_head_220530_6371.jpg) repeat-y;
+	margin: 0;	
+	display: inline-block;/*without the word block, the background image does not appear*/
+	/*appearance: document;  The Validator indicates that this is not a valid code, although I did get it from the dropdown menue.  I was just trying it out.*/
+}
+
+p img i { /* now I am just like a dog on a bone... I can't stop trying, but sadly, I have bigger fish to fry tonight*/
+	
+	float: right;
+	alignment-adjust:middle;/* I have tried a lot of things to center the images, but am not having any luck.  This is just the last variation on a theme... */
+	text-align:center; /*I know it is not text, but it worked when I used it on the whole body that included the text, only i didn't really want the text to be centered, only the images*/
+	
+}
+
+ol p {
+	margin-left: -40px;
+	
+}
+
+h1 {
+	padding-top: 30px;
+	
+}
+
+a:link {
+	color:#00F;
+}     
+a:hover {
+	color:#09F;
+} 
+a:active {
+	color:#0F0;
+}  
+
+/*W3C CSS Validator results for TextArea (CSS level 3)
+Congratulations! No Error Found.
+
+This document validates as CSS level 3 ! */
+ 
