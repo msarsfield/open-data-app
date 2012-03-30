@@ -1,5 +1,18 @@
 <?php
 
+/**
+  *Displays the list and map for the Open Data Set
+  *
+  *@package com.marysarsfield.open-data-app
+  *copyright 2012
+  *@author Mary Sarsfield <msarsfield@rogers.com>
+  *@link http://msarsfield.github.com/open-data-app/
+  *@license New BSD License 
+  *version 1.0.0
+  */
+
+
+
 require_once 'includes/db.php';
 
 $results = $db->query('
