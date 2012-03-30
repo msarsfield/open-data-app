@@ -1,5 +1,4 @@
 <?php
-
 /**
   *Displays the list and map for the Open Data Set
   *
@@ -10,8 +9,6 @@
   *@license New BSD License <https://github.com/msarsfield/open-data-app/blob/master/copyright_license.txt>
   *version 1.0.0
   */
-
-
 
 require_once 'includes/db.php';
 
@@ -41,12 +38,7 @@ $results = $db->query('
               
 	<?php endforeach; ?>
     
-    	 <? 
-//       $total_ratings = (  +  +  +  +  );
-//       $total_votes = 7;
-//       $average = $total_ratings / $total_votes;
-//       print("This garden rates ?/5 stars")
-	?>
+
     
 	</ul>
 	
