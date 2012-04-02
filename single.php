@@ -42,8 +42,8 @@ if (empty($results)) {
 <head>
 	<meta charset="utf-8">
 	<title><?php echo $results['name']; ?> &middot; Ottawa Gardens</title>
-	<link href="css/public.css" rel="stylesheet">
-	<script src="js/modernizr.js"></script>     
+	<link href="/css/public.css" rel="stylesheet">
+	<script src="/js/modernizr.js"></script>     
 </head>
 <body>
 	
