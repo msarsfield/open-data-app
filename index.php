@@ -22,11 +22,13 @@ $results = $db->query('
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Gardens</title>
+	<title>Ottawa's Veggie Gardens</title>
 	<link href="/css/public.css" rel="stylesheet">
 	<script src="/js/modernizr.js"></script>
 </head>
 <body>
+
+<aside>
       
     <ol class="garden">
     
@@ -42,12 +44,22 @@ $results = $db->query('
         
     </ol>
       
-      <div id="map"></div>
+      <div id="map">
+     
+      </div>
+      
+      <highlights>
+      <h1>Garden Highlights</h1>
+      </highlights>
 
-
+</aside>
+ 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCOSF6EUJHi28FLeCSkKsQsG1gtn4vRkN4&sensor=false"></script> <!--this is Thomas', get my own-->
 	<script src="/js/gardens.js"></script>
+<footer>
+
+</footer>
 
 </body>
 </html>

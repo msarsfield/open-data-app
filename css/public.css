@@ -3,12 +3,42 @@
 /* CAREFULL NOT TO MIX THIS ONE UP WITH THE ADMIN FILE*/
 
 html {
+	
 	display:list-item;
-	list-style:cjk-ideographic;/*whatever that means... just having fun with it*/
+	list-style:outside;
 	height: auto;
 	width: 800px;
-	background-image:
+	background-image: url url(../images/Christa-Richert_1003364_26900451.png alpha 30%);
+	position: 
+	color:#9C0;
+	margin: 0;
+	padding: 0;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font: normal 100%/1.50 sans-serif;
 	
+}
+
+body {
+	list-style-image:url(../images/flower.png 50/100%) /*it says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
+	margin: 0 auto;
+	text-decoration: blink; /*just playing to see if it works*/
+	
+}
+
+header{
+	background-color:#930;
+	height:200px;
+	width: 1000px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.middlebox{
+	width: 450px;
+	height:610px;
+	margin-right:10px;
+	margin-top:0px;
+	float:left;
 }
 
 #map {
@@ -16,9 +46,114 @@ html {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 75%;
+	width: 50%;
+	height: 50%;
 	color: #9C3;
+	clear: both:
+	float: right;
+}
+
+aside{
+	background-color:#36F;
+	height:auto;
+	width: 100px;
+	padding:0;
+	float:left;
+	clear: both;
+}
+
+aside img {
+	padding-left: 1.5px;	
+}
+
+.highlights {
+	margin:0;
+	padding:0;
+	height: 200px;
+	width: 200px;
+	overflow:scroll;
+	border: 2px #01CCFF solid;
+	float:left;
+	position: relative;
+	display: block;
+}
+
+.hightlights {
+	padding: 4px 8px;	
+	position:absolute;
+	  bottom: 10px;
+	  right: 10px;
+	border:outset;
+	border-color:#300;/*this puts the border/box around the gallery #s*/
+	background-color:#FFF;
+}
+.highlights h1 {
+	padding:4px 8px;
+	margin:0;
+	height: 22px;
+	font-size:100%;
+	color:#403022;
+	
+}
+
+footer{
+	background-color:#403022;
+	height: 50px;
+	width: 100%;
+	float:left;
+	display: inline;
+	margin-right:10px;
+	margin-top: 10px;
+	padding: 0;
 }
 
 
+/*footer li a{
+	width:500px;
+	height:55px;
+	list-style-type:none;
+	display:inline;
+	color:#FFF;
+	margin-right:38px;
+	text-align:right;
+	font-weight:400; 
+	font-size:140%;	
+}
 
+
+*/
+
+/*.rate {
+	width: 200;
+	height: 200;
+	background-color:#FFFFCC;
+	float: left;
+	
+	
+}*/
+
+
+
+
+
+
+/*CLEAR FIX*/
+
+
+.clearfix:before {
+	content:"";
+	display:table;	
+}
+
+.clearfix:after{
+	content:"";
+	display:table;	
+}
+
+.clearfix:after{
+		clear:both;
+}
+
+.clearfix{
+	*zoom:1;	
+}
