@@ -43,7 +43,7 @@ $results = $db->query('
 	?>
 	<li itemscope itemtype="http://schema.org/TouristAttraction" data-id="<?php echo $garden['id']; ?>">
 		<strong class="distance"></strong>
-		<a href="single.php?id=<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
+		<a href="/garden/<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a> <!--why?-->
 		<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
 			<meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
 			<meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
