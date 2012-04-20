@@ -32,7 +32,7 @@ $results = $db->query('
 
       
       
-<ol class="gardens">
+<ol class="garden">
 <?php foreach ($results as $garden) : ?>
 	<?php
 		if ($garden['rate_count'] > 0) {
