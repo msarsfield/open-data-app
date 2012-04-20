@@ -46,8 +46,8 @@ header{
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: auto;
-	height:auto;
+	width: 100%;
+	height:100%;
 	color: #9C3;
 	clear: both:
 	float: right;
