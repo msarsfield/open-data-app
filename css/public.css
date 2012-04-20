@@ -8,7 +8,7 @@ html {
 	list-style:inside;
 	height: auto;
 	width: auto;
-	background-image: url(../images/Christa-Richert_1003364_26900451.png);
+	background-image: url(../images/Christa-Richert_1003364_26900451.png alpha 20%);
 	padding: 0;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font:80%/1.50 sans-serif;
@@ -25,8 +25,9 @@ html {
 
 }
 
+
 body {
-	list-style-image:url(../images/flower.png 50%) ;/*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
+	list-style-image:url(../images/flower.png) ;/*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
 	margin: auto;
 	
 }
@@ -43,21 +44,17 @@ h1 {
 header{
 	background-color:#660;
 	height:200px;
-	width: 1000px;
+	width: 800px;
 	margin: 0;
 	padding: 0;
 	float: left;
 }
-aside{
-	background-color:#36F;
-	height:auto;
-	width: auto;
-	padding:0;
+
+header img {
+	margin: auto;
+	
 }
 
-aside img {
-	padding-left: 1.5px;	
-}
 
 footer{
 	background-color:#403022;
