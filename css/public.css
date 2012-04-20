@@ -36,6 +36,7 @@ header{
 .middlebox{
 	width: 450px;
 	height:610px;
+	background-color:#99F;
 	margin-right:10px;
 	margin-top:0px;
 	float:left;
@@ -54,10 +55,8 @@ header{
 aside{
 	background-color:#36F;
 	height:auto;
-	width: 200px;
+	width: auto;
 	padding:0;
-	float:left;
-	clear: both;
 }
 
 aside img {
@@ -103,6 +102,11 @@ footer{
 	margin-right:10px;
 	margin-top: 10px;
 	padding: 0;
+}
+
+footer p {
+	color: #FFF;
+	
 }
 
 
