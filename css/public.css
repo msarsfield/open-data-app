@@ -8,8 +8,7 @@ html {
 	list-style:outside;
 	height: auto;
 	width: 800px;
-	background-image: url url(../images/Christa-Richert_1003364_26900451.png alpha 30%);
-	position: 
+	background-image: url url(../images/Christa-Richert_1003364_26900451.png alpha 25%);
 	color:#9C0;
 	margin: 0;
 	padding: 0;
@@ -40,6 +39,16 @@ header{
 	padding: 0;
 	float: left;
 }
+aside{
+	background-color:#36F;
+	height:auto;
+	width: auto;
+	padding:0;
+}
+
+aside img {
+	padding-left: 1.5px;	
+}
 .middlebox{
 	width: 450px;
 	height:610px;
@@ -59,16 +68,6 @@ header{
 	float: right;
 }
 
-aside{
-	background-color:#36F;
-	height:auto;
-	width: auto;
-	padding:0;
-}
-
-aside img {
-	padding-left: 1.5px;	
-}
 
 .highlights {
 	margin:0;
