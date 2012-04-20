@@ -8,14 +8,14 @@ html {
 	list-style:inside;
 	height: auto;
 	width: auto;
-	background-image: url url(../images/Christa-Richert_1003364_26900451.png);
+	background-image: url(../images/Christa-Richert_1003364_26900451.png);
 	padding: 0;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font:80%/1.50 sans-serif;
 	
 }
-
 #map {
+	bottom: 0;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -26,8 +26,8 @@ html {
 }
 
 body {
-	list-style-image:url(../images/flower.png 50%); /*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
-	margin:0 auto;
+	list-style-image:url(../images/flower.png 50%) ;/*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
+	margin: auto;
 	text-decoration: none; /*just playing to see if it works*/
 	
 }
