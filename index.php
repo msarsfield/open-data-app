@@ -47,6 +47,7 @@ include 'includes/theme-top.php';
             </span>
         </li>
         <meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter>
+        
         <ol class="rater">
         
 		<?php for ($i = 1; $i <= 5; $i++) : ?>
@@ -54,8 +55,8 @@ include 'includes/theme-top.php';
         <li class="rater-level <?php echo $class; ?>">★</li>
         <?php endfor; ?>
         </ol>
-        </li>
-        <?php endforeach; ?>
+       
+	   <?php endforeach; ?>
     </ol>
       
       <div id="map">
