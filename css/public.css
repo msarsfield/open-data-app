@@ -14,20 +14,20 @@ html {
 	font:80%/1.50 sans-serif;
 	
 }
+
 #map {
-	bottom: 0;
 	position: absolute;
 	right: 0;
 	top: 0;
 	color: #9C3;
-	width: 75%;
+	width: 50%;
 
 
 }
 
 body {
-	list-style-image:url(../images/flower.png 50%) /*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
-	margin: auto;
+	list-style-image:url(../images/flower.png 50%); /*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
+	margin:0 auto;
 	text-decoration: none; /*just playing to see if it works*/
 	
 }
