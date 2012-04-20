@@ -47,7 +47,7 @@ $rating = 0;
 
 $cookie = get_rate_cookie();
 
-include 'includes/theme-top.php';
+require_once 'includes/theme-top.php';
 
 ?>
 
