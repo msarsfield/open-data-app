@@ -22,7 +22,7 @@ require_once 'includes/db.php';
 
 
 $sql = $db->prepare('
-	SELECT id, name, longitude, latitude, street_address
+	SELECT id, name, longitude, latitude, street_address, rate_count, rate_total
 	FROM gardens
 	WHERE id = :id
 ');
@@ -37,18 +37,60 @@ if (empty($results)) {
 	exit; 
 }
 
-?><!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title><?php echo $results['name']; ?> &middot; Ottawa Gardens</title>
-	<link href="/css/public.css" rel="stylesheet">
-	<script src="/js/modernizr.js"></script>     
-</head>
-<body>
-	
-	<h1><?php echo $results['name']; ?></h1>
+$title = $garden['name'];
+
+if ($garden['rate_count'] > 0) {
+$rating = round($garden['rate_total'] / $garden['rate_count']);
+} else {
+$rating = 0;
+}
+
+$cookie = get_rate_cookie();
+
+include 'includes/theme-top.php';
+
+?>
+
+<h1><?php echo $garden['name']; ?></h1>
+
+<dl>
+<dt>Average Rating</dt><dd><meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter></dd>
+<dt>Address</dt><dd><?php echo $garden['street_address']; ?></dd>
+<dt>Longitude</dt><dd><?php echo $garden['longitude']; ?></dd>
+<dt>Latitude</dt><dd><?php echo $garden['latitude']; ?></dd>
+</dl>
+
+<?php if (isset($cookie[$id])) : ?>
+
+<h2>Your rating</h2>
+<ol class="rater rater-usable">
+<?php for ($i = 1; $i <= 5; $i++) : ?>
+<?php $class = ($i <= $cookie[$id]) ? 'is-rated' : ''; ?>
+<li class="rater-level <?php echo $class; ?>">★</li>
+<?php endfor; ?>
+</ol>
+
+<?php else : ?>
+
+<h2>Rate</h2>
+<ol class="rater rater-usable">
+<?php for ($i = 1; $i <= 5; $i++) : ?>
+<li class="rater-level"><a href="rate.php?id=<?php echo $garden['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+<?php endfor; ?>
+</ol>
+
+<?php endif; ?>
+
+<h1><?php echo $results['name']; ?></h1>
 	<p>Street Address: <?php echo $results['street_address']; ?></p>
+<?php
+
+include 'includes/theme-bottom.php';
+
+?>
+
+
+
 	
-</body>
-</html>
+	
+

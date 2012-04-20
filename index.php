@@ -65,14 +65,7 @@ include 'includes/theme-top.php';
       
 </aside>
  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCOSF6EUJHi28FLeCSkKsQsG1gtn4vRkN4&sensor=false"></script> <!--this is Thomas', get my own-->
-	<script src="/js/gardens.js"></script>
-<footer>
-	<p>I hope you enjoy this site.  Remember to share the fruit of your labour and tosupport your local farmers!</p>
-</footer>
+<?php include 'includes/theme-bottom.php';
 
-</body>
-</html>
 
 
