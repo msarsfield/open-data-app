@@ -13,20 +13,12 @@
 require_once 'includes/db.php';
 
 $results = $db->query('
-	SELECT id, name, longitude, latitude, street_address
+	SELECT id, name, longitude, latitude, street_address, rate_count, rate_total
 	FROM gardens
 	ORDER BY name ASC
 ');
-
-?><!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Ottawa's Veggie Gardens</title>
-	<link href="/css/public.css" rel="stylesheet">
-	<script src="/js/modernizr.js"></script>
-</head>
-<body>
+include 'includes/theme-top.php';
+?>
 
 <aside>
       
@@ -34,9 +26,19 @@ $results = $db->query('
       <h1>Garden Highlights</h1>
       </highlights>
     
-    <ol class="garden">
     
-    <?php foreach ($results as $garden) : ?>
+    
+   
+   <ol class="garden">
+		<?php foreach ($results as $garden) : ?>
+        
+		<?php
+        if ($garden['rate_count'] > 0) {
+        $rating = round($garden['rate_total'] / $garden['rate_count']);
+        } else {
+        $rating = 0;
+        }
+        ?>
         <li itemscope itemtype="http://schema.org/TouristAttraction" data-id="<?php echo $garden['id'];?>">
             <a href="/garden/<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
             <span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
@@ -44,16 +46,22 @@ $results = $db->query('
                 <meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
             </span>
         </li>
-    <?php endforeach; ?>
+        <meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter>
+        <ol class="rater">
         
+		<?php for ($i = 1; $i <= 5; $i++) : ?>
+        <?php $class = ($i <= $rating) ? 'is-rated' : ''; ?>
+        <li class="rater-level <?php echo $class; ?>">★</li>
+        <?php endfor; ?>
+        </ol>
+        </li>
+        <?php endforeach; ?>
     </ol>
       
       <div id="map">
-     
+      
       </div>
       
-
-
 </aside>
  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

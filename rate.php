@@ -43,5 +43,7 @@ $sql->execute();
 save_rate_cookie($id, $rate);
 
 header('Location: single.php?id=' . $id);
+exit;
+
 
 
