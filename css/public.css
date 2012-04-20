@@ -14,11 +14,17 @@ html {
 	font:80%/1.50 sans-serif;
 	
 }
-
 #map {
-	border:thin;
-	color:#6C3;
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #9C3;
+	width: 75%;
+
+
 }
+
 body {
 	list-style-image:url(../images/flower.png 50%) /*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
 	margin: auto;
@@ -91,8 +97,8 @@ footer{
 p {
 	color: #FFF;
 	float: left;
-text-align:center;
-
+	text-align:center;
+}
 	
 }
 
