@@ -16,7 +16,10 @@ html {
 	font: normal 80%/1.50 sans-serif;
 	
 }
-
+#map {
+	border:thin;
+	color:#6C3;
+}
 body {
 	list-style-image:url(../images/flower.png 50%) /*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
 	margin: auto;
@@ -50,12 +53,7 @@ aside img {
 	padding-left: 1.5px;	
 }
 
-#map {
-	border:thin;
-	color:#6C3;
-	position:relative;
-	
-}
+
 
 .highlights {
 	margin:0;
@@ -79,8 +77,6 @@ aside img {
 	background-color:#FFF;
 }
 
-	
-}
 
 footer{
 	background-color:#403022;
@@ -93,7 +89,7 @@ footer{
 	padding: 0;
 }
 
-footer p {
+p {
 	color: #FFF;
 	float: left;
 	
