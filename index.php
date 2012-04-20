@@ -11,7 +11,7 @@
   */
 
 require_once 'includes/db.php';
-require_once 'includes/theme-top.php';
+
 
 $results = $db->query('
 	SELECT id, name, longitude, latitude, street_address, rate_count, rate_total
@@ -20,7 +20,7 @@ $results = $db->query('
 ');
 
 ?>
-
+<?php require_once 'includes/theme-top.php'; ?>
 <aside>
       
       <highlights>
