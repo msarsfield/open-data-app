@@ -3,7 +3,7 @@
 <script src="js/latlng.min.js"></script>
 <script src="js/gardens.js"></script>
 <footer>
-	<p>I hope you enjoy this site.  Remember to share the fruit of your labour and tosupport your local farmers!</p>
+	<p>I hope you enjoy this site.  Remember to share the fruit of your labour and to support your local farmers!</p>
 </footer>
 </body>
 </html>

@@ -66,7 +66,4 @@ $results = $db->query('
       
 </aside>
  
-<?php include 'includes/theme-bottom.php';
-
-
-
+<?php require_once 'includes/theme-bottom.php'; ?>
