@@ -20,7 +20,7 @@ html {
 	right: 0;
 	top: 0;
 	color: #9C3;
-	width: 50%;
+	width: 40%;
 
 
 }
@@ -28,10 +28,10 @@ html {
 body {
 	list-style-image:url(../images/flower.png 50%) ;/*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
 	margin: auto;
-	text-decoration: none; /*just playing to see if it works*/
 	
 }
-.highlights h1 {
+
+h1 {
 	padding:4px 8px;
 	border-radius: 2px;
 	height: 22px;
@@ -39,8 +39,9 @@ body {
 	color:#403022;
 	
 }
+
 header{
-	background-color:#930;
+	background-color:#660;
 	height:200px;
 	width: 1000px;
 	margin: 0;
@@ -58,31 +59,6 @@ aside img {
 	padding-left: 1.5px;	
 }
 
-
-
-.highlights {
-	margin:0;
-	padding:0;
-	height: 200px;
-	width: 200px;
-	overflow:scroll;
-	border: 2px #01CCFF solid;
-	float:left;
-	position: relative;
-	display: block;
-}
-
-.hightlights {
-	padding: 4px 8px;	
-	position:absolute;
-	  bottom: 10px;
-	  right: 10px;
-	border:outset;
-	border-color:#300;/*this puts the border/box around the gallery #s*/
-	background-color:#FFF;
-}
-
-
 footer{
 	background-color:#403022;
 	height: 50px;
@@ -96,11 +72,9 @@ footer{
 
 p {
 	color: #FFF;
-	float: left;
 	text-align:center;
 }
-	
-}
+
 
 
 /*footer li a{
