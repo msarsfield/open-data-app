@@ -42,11 +42,7 @@ $results = $db->query('
 		<?php foreach ($results as $garden) : ?>
         
 		<?php
-       if ($garden['rate_count'] > 0) {
-        $rating = round($garden['rate_total'] / $garden['rate_count']);
-        } else {
-        $rating = 0;
-        }
+
         ?>
         <li itemscope itemtype="http://schema.org/TouristAttraction" data-id="<?php echo $garden['id'];?>">
             <a href="/garden/<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
@@ -54,16 +50,7 @@ $results = $db->query('
                 <meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
                 <meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
             </span>
-        
-        <meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter>
-        
-        <ol class="rater">
-        
-		<?php for ($i = 1; $i <= 5; $i++) : ?>
-        <?php $class = ($i <= $rating) ? 'is-rated' : ''; ?>
-        <li class="rater-level <?php echo $class; ?>">★</li>
-        <?php endfor; ?>
-        </ol>
+
        </li>
 	   <?php endforeach; ?>
     </ol>
