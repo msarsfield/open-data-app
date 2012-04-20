@@ -30,6 +30,12 @@ $results = $db->query('
 
 <aside>
       
+    
+    
+      <highlights>
+      <h1>Garden Highlights</h1>
+      </highlights>
+    
     <ol class="garden">
     
     <?php foreach ($results as $garden) : ?>
@@ -48,9 +54,7 @@ $results = $db->query('
      
       </div>
       
-      <highlights>
-      <h1>Garden Highlights</h1>
-      </highlights>
+
 
 </aside>
  
@@ -58,7 +62,7 @@ $results = $db->query('
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCOSF6EUJHi28FLeCSkKsQsG1gtn4vRkN4&sensor=false"></script> <!--this is Thomas', get my own-->
 	<script src="/js/gardens.js"></script>
 <footer>
-
+	<p>I hope you enjoy this site.  Remember to share the fruit of your labour and tosupport your local farmers!</p>
 </footer>
 
 </body>

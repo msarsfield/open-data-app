@@ -14,7 +14,7 @@ html {
 	margin: 0;
 	padding: 0;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font: normal 100%/1.50 sans-serif;
+	font: normal 80%/1.50 sans-serif;
 	
 }
 
@@ -24,7 +24,14 @@ body {
 	text-decoration: none; /*just playing to see if it works*/
 	
 }
-
+.highlights h1 {
+	padding:4px 8px;
+	border-radius: 2px;
+	height: 22px;
+	font-size:100%;
+	color:#403022;
+	
+}
 header{
 	background-color:#930;
 	height:200px;
@@ -84,12 +91,7 @@ aside img {
 	border-color:#300;/*this puts the border/box around the gallery #s*/
 	background-color:#FFF;
 }
-.highlights h1 {
-	padding:4px 8px;
-	margin:0;
-	height: 22px;
-	font-size:100%;
-	color:#403022;
+
 	
 }
 
@@ -106,6 +108,7 @@ footer{
 
 footer p {
 	color: #FFF;
+	float: left;
 	
 }
 
