@@ -19,9 +19,9 @@ html {
 }
 
 body {
-	list-style-image:url(../images/flower.png 50/100%) /*it says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
-	margin: 0 auto;
-	text-decoration: blink; /*just playing to see if it works*/
+	list-style-image:url(../images/flower.png 25/100%) /*it says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
+	margin: auto;
+	text-decoration: none; /*just playing to see if it works*/
 	
 }
 
