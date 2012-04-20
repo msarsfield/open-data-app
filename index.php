@@ -46,7 +46,7 @@ $results = $db->query('
                 <meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
                 <meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
             </span>
-        </li>
+        
         <meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter>
         
         <ol class="rater">
@@ -56,7 +56,7 @@ $results = $db->query('
         <li class="rater-level <?php echo $class; ?>">★</li>
         <?php endfor; ?>
         </ol>
-       
+       </li>
 	   <?php endforeach; ?>
     </ol>
       
