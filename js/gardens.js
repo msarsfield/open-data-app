@@ -34,7 +34,7 @@ $(document).ready(function () {
 			position : pos
 			, map : map
 			, title : garden
-			, icon : '../images/flower.png'
+			, icon : 'images/flower.png'
 			, animation: google.maps.Animation.DROP
 		});
 
