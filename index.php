@@ -31,7 +31,8 @@ $results = $db->query('
 <body>
 
 <header>
-<img src="images/primary_banner.png" width="800" height="200" alt="banner of 4 images of fruit and vegetable"> </header>
+<img src="images/primary_banner.png" width="800" height="200" alt="banner of 4 images of fruit and vegetable"> 
+</header>
       
 <ol class="garden">
 <?php foreach ($results as $garden) : ?>

@@ -82,5 +82,4 @@ $raterLi.removeClass('is-rated-hover');
 })
 ;
 
-
 });
