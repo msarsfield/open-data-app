@@ -20,53 +20,46 @@ $results = $db->query('
 ');
 
 ?>
-<!DOCTYPE HTML>
-<html lang=en-ca>
-<head>
-<meta charset=utf-8>
-<title><?php if (isset($title)) { echo $title . ' · '; } ?> Ottawa Community Veggie Gardens!</title>
-<link href="css/public.css" rel="stylesheet">
-<script src="js/modernizr.dev.js"></script>
-</head>
-<body>
+<?php 
+	require_once "includes/theme-top.php";
+?>
+
 
       
       
-      <h1>Garden Highlights</h1>
-     
-    
-    
-    
-   
-   <ol class="garden">
-		<?php foreach ($results as $garden) : ?>
-        
-		<?php
+<ol class="gardens">
+<?php foreach ($results as $garden) : ?>
+	<?php
+		if ($garden['rate_count'] > 0) {
+			$rating = round($garden['rate_total'] / $garden['rate_count']);
+		} else {
+			$rating = 0;
+		}
+	?>
+	<li itemscope itemtype="http://schema.org/TouristAttraction" data-id="<?php echo $garden['id']; ?>">
+		<strong class="distance"></strong>
+		<a href="single.php?id=<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
+		<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+			<meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
+			<meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
+		</span>
+		<meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter>
+		<ol class="rater">
+		<?php for ($i = 1; $i <= 5; $i++) : ?>
+			<?php $class = ($i <= $rating) ? 'is-rated' : ''; ?>
+			<li class="rater-level <?php echo $class; ?>">★</li>
+		<?php endfor; ?>
+		</ol>
+	</li>
+<?php endforeach; ?>
+</ol>
 
-        ?>
-        <li itemscope itemtype="http://schema.org/TouristAttraction" data-id="<?php echo $garden['id'];?>">
-            <a href="/garden/<?php echo $garden['id']; ?>" itemprop="name"><?php echo $garden['name']; ?></a>
-            <span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-                <meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
-                <meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
-            </span>
+<div id="map"></div>
+      
+<?php 
+	require_once "includes/theme-bottom.php";
+?>
 
-       </li>
-	   <?php endforeach; ?>
-    </ol>
-      
-      <div id="map">
-      
-      </div>
-      
-<footer>
-	<p>I hope you enjoy this site.  Remember to share the fruit of your labour and to support your local farmers!</p>
-</footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCOSF6EUJHi28FLeCSkKsQsG1gtn4vRkN4&sensor=false"></script>
-<script src="js/gardens.js"></script>
-<script src="js/latlng.min.js"></script>
 
 </body>
 </html>
