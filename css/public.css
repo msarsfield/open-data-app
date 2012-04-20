@@ -19,7 +19,7 @@ html {
 }
 
 body {
-	list-style-image:url(../images/flower.png 25/100%) /*it says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
+	list-style-image:url(../images/flower.png 50%) /*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
 	margin: auto;
 	text-decoration: none; /*just playing to see if it works*/
 	
@@ -56,7 +56,7 @@ header{
 aside{
 	background-color:#36F;
 	height:auto;
-	width: 100px;
+	width: 200px;
 	padding:0;
 	float:left;
 	clear: both;
