@@ -30,8 +30,6 @@ $results = $db->query('
 
 <aside>
       
-    
-    
       <highlights>
       <h1>Garden Highlights</h1>
       </highlights>
