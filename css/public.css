@@ -4,18 +4,16 @@
 
 html {
 
-	background-image: url(../images/Christa-Richert_1003364_26900451.png) no repeat;
+	image: url(../images/Christa-Richert_1003364_26900451.png) no repeat;
+	z-index:100;
 }
-	
 	
 body {
 	margins: auto;
 	width: 1000px;	
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1em;
-
 }
-
 
 #map {
 	bottom: 0;
@@ -25,14 +23,12 @@ body {
 	width: 75%;
 }
 
-
 h1 {
 	padding:4px 8px;
 	border-radius: 2px;
 	height: 50px;
 	font-size: 80%;
 	color:#360; /*dardk green*/
-	
 }
 
 header{
@@ -44,42 +40,25 @@ header{
 }
 
 footer{
-	background-color:#C00;/*red*/
-	height: 60px;
+	background-color:#633;/*earthy brown*/
+	height: auto;
 	width: 100%;
+	display: inline;
 }
 
 footer p {
-	color: #F90; /*organge*/
+	color:#FC0; /*pumpkin*/
 	text-align:center;
-	font-size:2em;
+	font-size:1em;
 }
 
-
-
-/*footer li a{
-	width:500px;
-	height:55px;
-	list-style-type:none;
-	display:inline;
-	color:#FFF;
-	margin-right:38px;
-	text-align:right;
-	font-weight:400; 
-	font-size:140%;	
-}
-
-
-*/
-
-/*.rate {
+.rate {
 	width: 200;
 	height: 200;
 	background-color:#FFFFCC;
 	float: left;
 	
-	
-}*/
+}
 
 
 
