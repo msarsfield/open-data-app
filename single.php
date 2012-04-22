@@ -21,24 +21,24 @@ require_once 'includes/db.php';
 require_once 'includes/functions.php';
 
 $sql = $db->prepare('
-	SELECT id, name, adr, lat, lng, rate_count, rate_total
-	FROM dinobones
+	SELECT id, name, longitude, latitude, street_address, rate_count, rate_total
+	FROM gardens
 	WHERE id = :id
 ');
 
 $sql->bindValue(':id', $id, PDO::PARAM_INT);
 $sql->execute();
-$dino = $sql->fetch();
+$garden = $sql->fetch();
 
 if (empty($dino)) {
 	header('Location: index.php');
 	exit;
 }
 
-$title = $dino['name'];
+$title = $garden['name'];
 
-if ($dino['rate_count'] > 0) {
-	$rating = round($dino['rate_total'] / $dino['rate_count']);
+if ($garden['rate_count'] > 0) {
+	$rating = round($garden['rate_total'] / $garden['rate_count']);
 } else {
 	$rating = 0;
 }
@@ -59,13 +59,13 @@ $cookie = get_rate_cookie();
 <body>
 
 
-<h1><?php echo $dino['name']; ?></h1>
+<h1><?php echo $garden['name']; ?></h1>
 
 <dl>
 	<dt>Average Rating</dt><dd><meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter></dd>
-	<dt>Address</dt><dd><?php echo $dino['adr']; ?></dd>
-	<dt>Longitude</dt><dd><?php echo $dino['lng']; ?></dd>
-	<dt>Latitude</dt><dd><?php echo $dino['lat']; ?></dd>
+	<dt>Address</dt><dd><?php echo $garden['street_address']; ?></dd>
+	<dt>Longitude</dt><dd><?php echo $garden['longitude']; ?></dd>
+	<dt>Latitude</dt><dd><?php echo $garden['latitude']; ?></dd>
 </dl>
 
 <?php if (isset($cookie[$id])) : ?>
@@ -83,7 +83,7 @@ $cookie = get_rate_cookie();
 <h2>Rate</h2>
 <ol class="rater rater-usable">
 	<?php for ($i = 1; $i <= 5; $i++) : ?>
-	<li class="rater-level"><a href="rate.php?id=<?php echo $dino['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+	<li class="rater-level"><a href="rate.php?id=<?php echo $garden['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
 	<?php endfor; ?>
 </ol>
 
