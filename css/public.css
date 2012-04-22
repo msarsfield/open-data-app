@@ -4,7 +4,7 @@
 
 html {
 
-	image: url(../images/Christa-Richert_1003364_26900451.png) no repeat;
+	backgroun-image: url(../images/Christa-Richert_1003364_26900451.png) no repeat;
 	z-index:100;
 }
 	
@@ -57,7 +57,8 @@ footer p {
 	width: 200;
 	height: 200;
 	background-color:#FFFFCC;
-	float: left;
+	position:relative;
+	display:run-in;
 	
 }
 
