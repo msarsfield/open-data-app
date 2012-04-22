@@ -3,29 +3,28 @@
 /* CAREFULL NOT TO MIX THIS ONE UP WITH THE ADMIN FILE*/
 
 html {
-	
-	display:list-item;
-	list-style:outside;
-	height: auto;
-	width: 1000px;
-	background-image: url(../images/Christa-Richert_1003364_26900451.png);
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font:80%/1.50 sans-serif;
-	
+
+	background-image: url(../images/Christa-Richert_1003364_26900451.png) no repeat;
 }
+	
+	
+body {
+	margins: auto;
+	width: 1000px;	
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1em;
+
+}
+
+
 #map {
-	bottom: 0; ??????????????
-	position: absolute;
+	position: relative;
 	right: 0;
 	top: 0;
-	width: 200px;
-	height: 200px;
+	width: 50%;
 	border-color:#090;
 	border-width: medium;
-	list-style-image:url(../images/flower.png) ;/*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
 }
-
-
 
 
 h1 {
@@ -39,10 +38,10 @@ h1 {
 
 header{
 	position: absolute;
-	background-color:#390; /* olive green*/
 	height:200px;
 	width: 1000px;
 	margin: auto;
+	position:inherit;
 }
 
 footer{
@@ -54,6 +53,7 @@ footer{
 footer p {
 	color: #F90; /*organge*/
 	text-align:center;
+	font-size:2em;
 }
 
 
