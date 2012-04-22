@@ -1,36 +1,65 @@
 <?php
 
-require_once 'includes/db.php';
-require_once 'includes/functions.php';
+/**
+ * Sets a cookie to remember the user has already voted.
+ * We have to remember the ID of every single thing they voted on
+ *  and they must all be inside one single cookie--which is a string.
+ * So, we have to come up with a solution to store all the IDs
+ *  and since we are storing the IDs, we may as well store what they rated.
+ *
+ * http://www.flickr.com/photos/andyfox/2534644455/sizes/o/in/photostream/
+ *
+ * Our cookie will look something like this:
+ *  1:4;5:3;6:2
+ *
+ * Or, translated:
+ *  id:rate;id:rate;id:rate
+*/
+function save_rate_cookie ($id, $rate) {
+	$cookie = get_rate_cookie();
 
-$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
-$rate = filter_input(INPUT_GET, 'rate', FILTER_SANITIZE_NUMBER_INT);
-$cookie = get_rate_cookie();
+	$rated = array();
 
-if (empty($id)) {
-	header('Location: index.php');
-	exit;
+	foreach ($cookie as $key=>$value) {
+		$rated[] = $key . ':' . $value;
+	}
+
+	$rated[] = $id . ':' . $rate;
+	$cookie_content = implode(';', $rated);
+
+	// http://php.net/setcookie
+	// setcookie($name, $content, $expiry_time, $path);
+	// Cookie expirations are in seconds
+	setcookie('dinobones_rated', $cookie_content, time() + 60 * 60 * 24 * 365, '/');
 }
 
-// Only allow the user to rate if:
-//  1. there is no cookie, aka they haven't already rated
-//  2. the rating value is greater than 0
-//  3. the rating value is less than 5
-if (isset($cookie[$id]) || $rate < 0 || $rate > 5) {
-	header('Location: single.php?id=' . $id);
-	exit;
+/**
+ * Gets the cookie and splits it apart into its component pieces
+ *
+ * Takes:
+ *  id:rate;id:rate;id:rate
+ * And translates to:
+ *  array(
+ *    id => rate
+ *    , id => rate
+ *    , id => rate
+ *  )
+ */
+function get_rate_cookie () {
+	$cookie_content = filter_input(INPUT_COOKIE, 'dinobones_rated', FILTER_SANITIZE_STRING);
+
+	if (empty($cookie_content)) {
+		return array();
+	}
+
+	$rated = explode(';', $cookie_content);
+
+	$ratings = array();
+
+	foreach ($rated as $item) {
+		$pieces = explode(':', $item);
+		$ratings[$pieces[0]] = $pieces[1];
+	}
+
+	return $ratings;
 }
-
-$sql = $db->prepare('
-	UPDATE dinobones
-	SET rate_count = rate_count + 1, rate_total = rate_total + :rate
-	WHERE id = :id
-');
-$sql->bindValue(':id', $id, PDO::PARAM_INT);
-$sql->bindValue(':rate', $rate, PDO::PARAM_INT);
-$sql->execute();
-
-save_rate_cookie($id, $rate);
-
-header('Location: single.php?id=' . $id);
-exit;
