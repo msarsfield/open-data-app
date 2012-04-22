@@ -30,7 +30,7 @@ $sql->bindValue(':id', $id, PDO::PARAM_INT);
 $sql->execute();
 $garden = $sql->fetch();
 
-if (empty($dino)) {
+if (empty($garden)) {
 	header('Location: index.php');
 	exit;
 }
