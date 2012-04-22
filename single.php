@@ -9,7 +9,7 @@
   *@license New BSD License <https://github.com/msarsfield/open-data-app/blob/master/copyright_license.txt>
   *version 1.0.0
   */
-
+ini_set('display_errors', 1); 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($id)) {
@@ -18,7 +18,7 @@ if (empty($id)) {
 }
 
 require_once 'includes/db.php';
-require_once 'includes/functions.php';
+//require_once 'includes/functions.php';
 
 $sql = $db->prepare('
 	SELECT id, name, longitude, latitude, street_address, rate_count, rate_total
