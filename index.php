@@ -31,7 +31,7 @@ $results = $db->query('
 <body>
 
 <header>
-<img src="images/primary_banner.png" width="800" height="200" alt="banner of 4 images of fruit and vegetable"> 
+  <img src="images/primary_banner.png" alt="banner of 4 images of fruit and vegetable"> 
 </header>
       
 <button id="geo">Find Me</button>
@@ -60,7 +60,7 @@ $results = $db->query('
 		<ol class="rater">
 		<?php for ($i = 1; $i <= 5; $i++) : ?>
 			<?php $class = ($i <= $rating) ? 'is-rated' : ''; ?>
-			<li class="rater-level <?php echo $class; ?>">★</li>
+			<li class="rater-level <?php echo $class; ?>"><img src="images/rater_carrot.png" width="24" height="40" alt="carrot used to rate the garden"></li>
 		<?php endfor; ?>
 		</ol>
 	</li>
@@ -70,7 +70,7 @@ $results = $db->query('
 <div id="map"></div>
       
 <footer>
-	<p>I hope you that enjoy this using this application to find community growing gardens.  Please share the fruit of your labour with your friends and neighbours and remember to support your local farmers!</p>
+	<p>I hope you that you like using my community veggie garden application.  Share the fruit of your labour with your friends, and remember to <strong>support your local farmers!</strong></p>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

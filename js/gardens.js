@@ -29,7 +29,7 @@ $(document).ready(function () {
 			// Style the content in your CSS
 			var info = '<div class="info-window">'
 				+ '<strong>' + garden + '</strong>'
-				+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Rate or Comment!</a>'
+				+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Comments? Rate a Garden!</a>'
 				+ '</div>'
 			;
 
@@ -82,7 +82,7 @@ $(document).ready(function () {
 	}
 
 	/****************************************************/
-	/***** Rating Stars *********************************/
+	/***** Rating Stars ***************HOW DO I TARGET THESE?  IN CSS?******************/
 	/****************************************************/
 
 	var $raterLi = $('.rater-usable li');

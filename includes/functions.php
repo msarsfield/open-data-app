@@ -30,7 +30,7 @@ function save_rate_cookie ($id, $rate) {
 	// http://php.net/setcookie
 	// setcookie($name, $content, $expiry_time, $path);
 	// Cookie expirations are in seconds
-	setcookie('dinobones_rated', $cookie_content, time() + 60 * 60 * 24 * 365, '/');
+	setcookie('garden_rated', $cookie_content, time() + 60 * 60 * 24 * 365, '/');
 }
 
 /**
@@ -46,7 +46,7 @@ function save_rate_cookie ($id, $rate) {
  *  )
  */
 function get_rate_cookie () {
-	$cookie_content = filter_input(INPUT_COOKIE, 'dinobones_rated', FILTER_SANITIZE_STRING);
+	$cookie_content = filter_input(INPUT_COOKIE, 'garden_rated', FILTER_SANITIZE_STRING);
 
 	if (empty($cookie_content)) {
 		return array();

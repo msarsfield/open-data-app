@@ -20,7 +20,8 @@ body {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 75%;
+	width: 45%;
+	border-image: url(../images/Christa-Richert_1003364_26900451.png);
 }
 
 h1 {
@@ -40,7 +41,7 @@ header{
 }
 
 footer{
-	background-color:#633;/*earthy brown*/
+	color: #633;/*earthy brown*/
 	height: auto;
 	width: 100%;
 	display: inline;
