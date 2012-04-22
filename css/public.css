@@ -23,7 +23,7 @@ html {
 	border-color:#090;
 }
 
-body {
+body {	
 	list-style-image:url(../images/flower.png) ;/*This is the carrot on the map.  It says flower, but I changed it to a carrot when I learned that the list is of veggie gardens...*/
 }
 
@@ -96,7 +96,7 @@ footer p {
 
 /*CLEAR FIX*/
 
-
+/*
 .clearfix:before {
 	content:"";
 	display:table;	
@@ -114,3 +114,4 @@ footer p {
 .clearfix{
 	*zoom:1;	
 }
+*/
