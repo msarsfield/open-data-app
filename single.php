@@ -18,7 +18,7 @@ if (empty($id)) {
 }
 
 require_once 'includes/db.php';
-//require_once 'includes/functions.php';
+require_once 'includes/functions.php';
 
 $sql = $db->prepare('
 	SELECT id, name, longitude, latitude, street_address, rate_count, rate_total
