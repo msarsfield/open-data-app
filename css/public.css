@@ -18,12 +18,11 @@ body {
 
 
 #map {
-	position: relative;
+	bottom: 0;
+	position: absolute;
 	right: 0;
 	top: 0;
-	width: 50%;
-	border-color:#090;
-	border-width: medium;
+	width: 75%;
 }
 
 
