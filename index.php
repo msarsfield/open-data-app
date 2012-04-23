@@ -34,13 +34,14 @@ $results = $db->query('
           <img src="images/primary_banner.png" alt="banner of 4 images of fruit and vegetable"> 
         </header>
         
-        <section class="main">     
+             
             <button id="geo">Find Me</button>
             <form id="geo-form">
                 <label for="adr">Address</label>
                 <input id="adr">
             </form>
             
+         <section class="main">   
             <ol class="garden">
             <?php foreach ($results as $garden) : ?>
                 <?php
