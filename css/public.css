@@ -31,6 +31,7 @@ body {
 	right: 0;
 	top: 0;
 	width: 50%;
+	height: 800px;
 }
 
 .main .garden {
@@ -73,7 +74,6 @@ footer p {
 	height: 200;
 	background-color:#FFFFCC;
 	position:relative;
-	
 }
 
 .info-window {
