@@ -19,7 +19,7 @@ body {
 
 .main {
 	width: 100%;
-	height: 800px;
+	height: 900px;
 	position: relative;	
 }
 
@@ -29,13 +29,12 @@ body {
 	right: 0;
 	top: 0;
 	width: 50%;
-	height: 800px;
+	height: 900px;
 }
 
-.main .garden {
+.garden {
 	width: 50%;
-	overflow:scroll;
-	height: 800px;
+	height: 900px;
 }
 
 h1 {
@@ -47,11 +46,8 @@ h1 {
 }
 
 header{
-	position:relative;
 	height:200px;
 	width: 100%;
-	margin: auto;
-	position:inherit;
 }
 
 header img {
