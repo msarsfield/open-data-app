@@ -40,6 +40,11 @@ $results = $db->query('
 	<input id="adr">
 </form>
 
+<!--<form id="geo-form">
+<label for="loc">"Distance"</label>
+<input id="loc">
+</form>-->
+
 <ol class="garden">
 <?php foreach ($results as $garden) : ?>
 	<?php
@@ -60,7 +65,7 @@ $results = $db->query('
 		<ol class="rater">
 		<?php for ($i = 1; $i <= 5; $i++) : ?>
 			<?php $class = ($i <= $rating) ? 'is-rated' : ''; ?>
-			<li class="rater-level <?php echo $class; ?>"><img src="images/rater_carrot.png" width="24" height="40" alt="carrot used to rate the garden"></li>
+			<li class="rater-level <?php echo $class; ?>">★</li>
 		<?php endfor; ?>
 		</ol>
 	</li>

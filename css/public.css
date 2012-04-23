@@ -43,7 +43,7 @@ header{
 }
 
 footer{
-	color: #633;/*earthy brown*/
+	background-color: #633;/*earthy brown*/
 	height: auto;
 	width: 100%;
 	display: inline;
@@ -65,18 +65,79 @@ footer p {
 
 .info-window {
 	width: 300px;
-	height: 300px;
+	height: auto;
 	overflow:scroll;
 	background-color: #FC9; /*peach*/
-	
 }
 
 .rater rater-usable ol{
-		display:inline;
-	
+	display:inline;
 }
 
+.garden li {
+cursor: pointer;
+}
 
+.garden li:hover {
+background-color: #f4f3f0;
+}
+
+.garden a,
+.garden a:link,
+.garden a:visited {
+color: #a18f7f;
+text-decoration: none;
+}
+
+.garden li meter {
+display: inline-block;
+height: 0;
+margin: 0;
+padding: 0;
+width: 0;
+
+-webkit-appearance: none;
+appearance: none;
+}
+
+.rater {
+display: inline-block;
+margin: 0;
+padding: 0;
+vertical-align: middle;
+
+list-style-type: none;
+line-height: 1;
+}
+
+.rater-level {
+float: left;
+
+color: #efecd2;
+}
+
+.rater-level a,
+.rater-level a:link,
+.rater-level a:visited {
+color: #efecd2;
+text-decoration: none
+}
+
+.rater-level a:hover,
+.rater-level a:focus,
+.rater-level a:active,
+.is-rated,
+.is-rated a,
+.is-rated a:link,
+.is-rated a:visited,
+.is-rated a:hover,
+.is-rated a:focus,
+.is-rated a:active,
+.is-rated-hover a,
+.is-rated-hover a:link,
+.is-rated-hover a:visited {
+color: #ffe91f;
+}
 
 
 
