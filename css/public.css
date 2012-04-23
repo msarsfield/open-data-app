@@ -54,6 +54,10 @@ header{
 	position:inherit;
 }
 
+header img {
+	text-align:center;	
+}
+
 footer{
 	background-color: #633;/*earthy brown*/
 	width: 100%;
