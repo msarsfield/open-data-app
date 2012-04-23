@@ -58,6 +58,7 @@ footer p {
 	height: 200;
 	background-color:#FFFFCC;
 	position:relative;
+	
 }
 
 #info-window {
@@ -67,6 +68,23 @@ footer p {
 	background-color: #FC9; /*peach*/
 	
 }
+
+
+
+
+
+# rater rater-usable ol {
+		display:!important;
+	
+	
+}
+
+
+
+
+
+
+
 
 
 

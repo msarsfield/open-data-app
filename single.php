@@ -70,7 +70,7 @@ $cookie = get_rate_cookie();
 
 <?php if (isset($cookie[$id])) : ?>
 
-<h2>Your rating</h2>
+<h2>Your rating </h2>
 <ol class="rater rater-usable">
 	<?php for ($i = 1; $i <= 5; $i++) : ?>
 		<?php $class = ($i <= $cookie[$id]) ? 'is-rated' : ''; ?>
