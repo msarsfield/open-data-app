@@ -83,13 +83,13 @@ footer p {
 	background-color: #FC9; /*peach*/
 }
 
-.rater rater-usable ol{
-	display:inline;
+.garden{
 	list-style-type: none;
 }
 
 .garden li {
 	cursor: pointer;
+	padding: 0;
 }
 
 .garden li:hover {
