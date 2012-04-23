@@ -3,19 +3,25 @@
 /* CAREFULL NOT TO MIX THIS ONE UP WITH THE ADMIN FILE*/
 
 html {
-
-	backgroun-image: url(../images/Christa-Richert_1003364_26900451.png);
+	background-image: url(../images/Christa-Richert_1003364_26900451.png);
 	background:no-repeat;
 	backface-visibility:visible;
 
 }
 	
 body {
-	margins: auto;
-	width: 600px;	
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1em;
+}
 
+#wrapper {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.main {
+	width: 100%;
+	position: relative;	
 }
 
 #map {
@@ -23,7 +29,14 @@ body {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 45%;
+	width: 50%;
+}
+
+.main .garden {
+	width: 50%;
+	height: 100%;
+	overflow:scroll-x;
+	
 }
 
 h1 {

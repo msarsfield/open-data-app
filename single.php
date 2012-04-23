@@ -57,41 +57,49 @@ $cookie = get_rate_cookie();
 <script src="js/modernizr.dev.js"></script>
 </head>
 <body>
+    <article id="wrapper"> 
+        <header>
+          <img src="images/primary_banner.png" alt="banner of 4 images of fruit and vegetable"> 
+        </header>
+        
+        <section class="main"> 
 
-
-<h1><?php echo $garden['name']; ?></h1>
-
-<dl>
-	<dt>Average Rating</dt><dd><meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter></dd>
-	<dt>Address</dt><dd><?php echo $garden['street_address']; ?></dd>
-	<dt>Longitude</dt><dd><?php echo $garden['longitude']; ?></dd>
-	<dt>Latitude</dt><dd><?php echo $garden['latitude']; ?></dd>
-</dl>
-
-<?php if (isset($cookie[$id])) : ?>
-
-<h2>Your rating </h2>
-<ol class="rater rater-usable">
-	<?php for ($i = 1; $i <= 5; $i++) : ?>
-		<?php $class = ($i <= $cookie[$id]) ? 'is-rated' : ''; ?>
-		<li class="rater-level <?php echo $class; ?>">★</li>
-	<?php endfor; ?>
-</ol>
-
-<?php else : ?>
-
-<h2>Rate</h2>
-<ol class="rater rater-usable">
-	<?php for ($i = 1; $i <= 5; $i++) : ?>
-	<li class="rater-level"><a href="rate.php?id=<?php echo $garden['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
-	<?php endfor; ?>
-</ol>
-
-<?php endif; ?>
-<footer>
-	<p><strong>I hope you that enjoy this using this application to find community growing gardens.  Please share the fruit of your labour with your friends and neighbours and remember to support your local farmers!</strong></p>
-</footer>
-
+            <h1><?php echo $garden['name']; ?></h1>
+            
+            <dl>
+                <dt>Average Rating</dt><dd><meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter></dd>
+                <dt>Address</dt><dd><?php echo $garden['street_address']; ?></dd>
+                <dt>Longitude</dt><dd><?php echo $garden['longitude']; ?></dd>
+                <dt>Latitude</dt><dd><?php echo $garden['latitude']; ?></dd>
+            </dl>
+            
+            <?php if (isset($cookie[$id])) : ?>
+            
+            <h2>Your rating </h2>
+            <ol class="rater rater-usable">
+                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                    <?php $class = ($i <= $cookie[$id]) ? 'is-rated' : ''; ?>
+                    <li class="rater-level <?php echo $class; ?>">★</li>
+                <?php endfor; ?>
+            </ol>
+            
+            <?php else : ?>
+            
+            <h2>Rate</h2>
+            <ol class="rater rater-usable">
+                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                <li class="rater-level"><a href="rate.php?id=<?php echo $garden['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+                <?php endfor; ?>
+            </ol>
+            
+            <?php endif; ?>
+            
+      	</section> 
+         	    
+        <footer>
+            <p><strong>I hope you that enjoy this using this application to find community growing gardens.  Please share the fruit of your labour with your friends and neighbours and remember to support your local farmers!</strong></p>
+        </footer>
+	</article>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCOSF6EUJHi28FLeCSkKsQsG1gtn4vRkN4&sensor=false"></script>
 <script src="js/gardens.js"></script>
