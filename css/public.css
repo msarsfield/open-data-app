@@ -3,10 +3,7 @@
 /* CAREFULL NOT TO MIX THIS ONE UP WITH THE ADMIN FILE*/
 
 html {
-	background-image: url(../images/Christa-Richert_1003364_26900451.png);
-	background:no-repeat;
-	backface-visibility:visible;
-
+	background-image: url(../images/Christa-Richert_1003364_26900451.png) repeat;
 }
 	
 body {
