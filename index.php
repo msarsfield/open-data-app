@@ -57,7 +57,7 @@ $results = $db->query('
                         <meta itemprop="latitude" content="<?php echo $garden['latitude']; ?>">
                         <meta itemprop="longitude" content="<?php echo $garden['longitude']; ?>">
                     </span>
-                    <meter value="<?php echo $rating; ?>" min="0" max="5"><?php echo $rating; ?> out of 5</meter>
+                    
                     <ol class="rater">
                     <?php for ($i = 1; $i <= 5; $i++) : ?>
                         <?php $class = ($i <= $rating) ? 'is-rated' : ''; ?>
