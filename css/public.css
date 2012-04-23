@@ -36,7 +36,7 @@ body {
 .main .garden {
 	width: 50%;
 	overflow:scroll;
-	overflow:hidden;
+	height: 800px;
 }
 
 h1 {
