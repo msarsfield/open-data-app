@@ -4,15 +4,18 @@
 
 html {
 
-	backgroun-image: url(../images/Christa-Richert_1003364_26900451.png) no repeat;
-	z-index:100;
+	backgroun-image: url(../images/Christa-Richert_1003364_26900451.png);
+	background:no-repeat;
+	backface-visibility:visible;
+
 }
 	
 body {
 	margins: auto;
-	width: 1000px;	
+	width: 600px;	
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	font-size: 1em;
+
 }
 
 #map {
@@ -35,7 +38,7 @@ h1 {
 header{
 	position: absolute;
 	height:200px;
-	width: 1000px;
+	width: 100%;
 	margin: auto;
 	position:inherit;
 }
