@@ -35,6 +35,9 @@ body {
 .garden {
 	width: 50%;
 	height: 900px;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 h1 {
