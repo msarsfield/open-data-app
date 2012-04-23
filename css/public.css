@@ -24,7 +24,6 @@ body {
 	right: 0;
 	top: 0;
 	width: 45%;
-	border-image: url(../images/Christa-Richert_1003364_26900451.png);
 }
 
 h1 {
@@ -36,7 +35,7 @@ h1 {
 }
 
 header{
-	position: absolute;
+	position:relative;
 	height:200px;
 	width: 100%;
 	margin: auto;
@@ -64,7 +63,7 @@ footer p {
 	
 }
 
-#info-window {
+.info-window {
 	width: 300px;
 	height: 300px;
 	overflow:scroll;
@@ -72,11 +71,7 @@ footer p {
 	
 }
 
-
-
-
-
-#rater rater-usable ol{
+.rater rater-usable ol{
 		display:inline;
 	
 }
