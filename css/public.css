@@ -58,11 +58,12 @@ footer p {
 	height: 200;
 	background-color:#FFFFCC;
 	position:relative;
-	display:run-in;
-	
 }
 
-
+#ol l1 {
+	display:inline-block;
+	
+}
 
 
 
