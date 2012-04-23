@@ -21,6 +21,7 @@ body {
 
 .main {
 	width: 100%;
+	height: 800px;
 	position: relative;	
 }
 
@@ -34,9 +35,7 @@ body {
 
 .main .garden {
 	width: 50%;
-	height: 100%;
-	overflow:scroll-x;
-	
+	overflow:scroll;
 }
 
 h1 {
