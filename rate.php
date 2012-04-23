@@ -1,6 +1,6 @@
 <?php
 /**
-  *Ensures that the web visitor can only rate a location 1 time.  
+  *Ensures that the web visitor can only rate a location 1 time only.  
   *
   *@package com.marysarsfield.open-data-app
   *copyright 2012
