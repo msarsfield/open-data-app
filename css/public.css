@@ -85,32 +85,33 @@ footer p {
 
 .rater rater-usable ol{
 	display:inline;
+	list-style-type: none;
 }
 
 .garden li {
-cursor: pointer;
+	cursor: pointer;
 }
 
 .garden li:hover {
-background-color: #f4f3f0;
+	background-color: #f4f3f0;
 }
 
 .garden a,
 .garden a:link,
 .garden a:visited {
-color: #a18f7f;
-text-decoration: none;
+	color: #a18f7f;
+	text-decoration: none;
 }
 
 .garden li meter {
-display: inline-block;
-height: 0;
-margin: 0;
-padding: 0;
-width: 0;
-
--webkit-appearance: none;
-appearance: none;
+	display: inline-block;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	width: 0;
+	
+	-webkit-appearance: none;
+	appearance: none;
 }
 
 .rater {
