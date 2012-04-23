@@ -29,11 +29,11 @@ $(document).ready(function () {
 			// Style the content in your CSS
 			var info = '<div class="info-window">'
 				+ '<strong>' + garden + '</strong>'
-				+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Comments? Rate a Garden!</a>'
+				+ '<a href="single.php?id=' + $(this).attr('data-id') + '"><br>Comments? Rate a Garden!</a>'
 				+ '</div>'
 			;
 
-			// Determine this dino's latitude and longitude
+			// Determine this garden's latitude and longitude
 			var lat = parseFloat($(this).find('meta[itemprop="latitude"]').attr('content'));
 			var lng = parseFloat($(this).find('meta[itemprop="longitude"]').attr('content'));
 			var pos = new google.maps.LatLng(lat, lng);
@@ -46,7 +46,7 @@ $(document).ready(function () {
 				, lng : lng
 			});
 
-			// Create a marker object for this dinosaur
+			// Create a marker object for this gardenr
 			var marker = new google.maps.Marker({
 				position : pos
 				, map : map
@@ -55,7 +55,7 @@ $(document).ready(function () {
 				, animation: google.maps.Animation.DROP
 			});
 
-			// A function for showing this dinosaur's info window
+			// A function for showing this garden's info window
 			function showInfoWindow (ev) {
 				if (ev.preventDefault) {
 					ev.preventDefault();
@@ -160,7 +160,7 @@ $(document).ready(function () {
 			// `toFixed()` makes the distance only have 1 decimal place
 			$li.find('.distance').html(locDistances[j].distance.toFixed(1) + ' km');
 
-			$dinoList.append($li);
+			$garden.append($li);
 		}
 	}
 
