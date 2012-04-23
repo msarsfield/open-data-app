@@ -60,11 +60,13 @@ footer p {
 	position:relative;
 }
 
-#ol l1 {
-	display:inline;
+#info-window {
+	width: 300px;
+	height: 300px;
+	overflow:scroll;
+	background-color: #FC9; /*peach*/
 	
 }
-
 
 
 
