@@ -52,7 +52,7 @@ $cookie = get_rate_cookie();
 <html lang=en-ca>
 <head>
 <meta charset=utf-8>
-<title><?php if (isset($title)) { echo $title . ' · '; } ?> Ottawa Community Veggie Gardens!</title>
+<title><?php if (isset($title)) { echo $title . ' · '; } ?>Ottawa Community Veggie Gardens!</title>
 <link href="css/public.css" rel="stylesheet">
 <script src="js/modernizr.dev.js"></script>
 </head>
@@ -74,7 +74,7 @@ $cookie = get_rate_cookie();
 <ol class="rater rater-usable">
 	<?php for ($i = 1; $i <= 5; $i++) : ?>
 		<?php $class = ($i <= $cookie[$id]) ? 'is-rated' : ''; ?>
-		<li class="rater-level <?php echo $class; ?>">★</li>
+		<li class="rater-level <?php echo $class; ?>">img src="images/rater_carrot.png" width="24" height="40" alt="carrot used to rate the garden"</li>
 	<?php endfor; ?>
 </ol>
 
@@ -83,7 +83,7 @@ $cookie = get_rate_cookie();
 <h2>Rate</h2>
 <ol class="rater rater-usable">
 	<?php for ($i = 1; $i <= 5; $i++) : ?>
-	<li class="rater-level"><a href="rate.php?id=<?php echo $garden['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+	<li class="rater-level"><a href="rate.php?id=<?php echo $garden['id']; ?>&rate=<?php echo $i; ?>">img src="images/rater_carrot.png" width="24" height="40" alt="carrot used to rate the garden"</a></li>
 	<?php endfor; ?>
 </ol>
 
