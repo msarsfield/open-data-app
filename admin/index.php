@@ -14,7 +14,7 @@
 
 
 require_once '../includes/users.php';
-	if (!user_is_signed_in()) {
+	if (!user_signed_in()) {
 	header('Location: ../includes/sign-in.php');
 	exit;
 }
