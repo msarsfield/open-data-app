@@ -55,7 +55,7 @@ IF ($_SERVER ['REQUEST_METHOD'] == "POST") {
 ?>
 
 
-	<form method="post" action="sing_in.php">
+	<form method="post" action="sign-in.php">
     	<div>
         	<label for="email"> E-mail Address</label>   
             <input type="email" id="email" name="required">	
