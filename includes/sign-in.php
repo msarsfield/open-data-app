@@ -13,7 +13,7 @@
 require_once 'users.php';
 require_once 'db.php';
 
-if (user_is_signed_in()) {
+if (user_signed_in()) {
 	header('Location: ../admin/index.php');
 	exit;	
 }
