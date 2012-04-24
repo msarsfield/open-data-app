@@ -12,7 +12,7 @@ body {
 }
 
 #wrapper {
-	width: 900px;
+	width: 1000px;
 	margin: 0 auto;
 	background-color: rgba(255,255,255,1);
 }
@@ -20,7 +20,8 @@ body {
 .main {
 	width: 100%;
 	height: 900px;
-	position: relative;	
+	position: relative;
+	padding: 5px;	
 }
 
 #map {
@@ -134,7 +135,7 @@ color: #efecd2;
 .rater-level a,
 .rater-level a:link,
 .rater-level a:visited {
-color: #efecd2;
+color:#CCC ;
 text-decoration: none
 }
 
@@ -151,7 +152,7 @@ text-decoration: none
 .is-rated-hover a,
 .is-rated-hover a:link,
 .is-rated-hover a:visited {
-color: #ffe91f;
+color: #F60;
 }
 
 
