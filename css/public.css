@@ -129,7 +129,7 @@ line-height: 1;
 .rater-level {
 float: left;
 
-color: #efecd2;
+color: #CF9; /* this is the light star before it is rated*/
 }
 
 .rater-level a,
