@@ -26,10 +26,8 @@ body {
 }
 
 #map {
-	bottom: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
+	float: right;
+	display: inline;
 	width: 46%;
 	height: 900px;
 }
@@ -37,9 +35,8 @@ body {
 .garden {
 	width: 46%;
 	height: 900px;
-	position: absolute;
-	left: 0;
-	top: 0;
+	float: left;
+	display: inline;
 }
 
 h1 {
@@ -165,7 +162,7 @@ color: #F60;
 
 /*CLEAR FIX*/
 
-/*
+
 .clearfix:before {
 	content:"";
 	display:table;	
@@ -183,4 +180,3 @@ color: #F60;
 .clearfix{
 	*zoom:1;	
 }
-*/

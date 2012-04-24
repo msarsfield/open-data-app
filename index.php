@@ -41,7 +41,7 @@ $results = $db->query('
                 <input id="adr">
             </form>
             
-         <section class="main">   
+         <section class="main clearfix">   
             <ol class="garden">
             <?php foreach ($results as $garden) : ?>
                 <?php
