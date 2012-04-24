@@ -14,8 +14,7 @@ body {
 #wrapper {
 	width: 900px;
 	margin: 0 auto;
-	background-color: rgba(255,255,255,0.75);
-	z-index: 100;
+	background-color: rgba(255,255,255,1);
 }
 
 .main {
@@ -101,7 +100,7 @@ footer p {
 .garden a,
 .garden a:link,
 .garden a:visited {
-	color: #a18f7f;
+	color: #000;
 	text-decoration: none;
 }
 
