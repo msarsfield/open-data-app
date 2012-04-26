@@ -35,7 +35,7 @@ IF ($_SERVER ['REQUEST_METHOD'] == "POST") {
 			}
 
 	if (empty($errors)) {
-		
+		echo 'works';
 		 $user = user_get($db, $email);
 		 
 		 if(!empty($user)) {
