@@ -10,11 +10,11 @@
   *version 1.0.0
   */
 
-require_once 'users.php';
-require_once 'db.php';
+require_once '../includes/users.php';
+require_once '../includes/db.php';
 
-if (user_is_signed_in()) {
-	header('Location: ../admin/index.php');
+if (user_signed_in()) {
+	header('Location: index.php');
 	exit;	
 }
 
@@ -55,7 +55,7 @@ IF ($_SERVER ['REQUEST_METHOD'] == "POST") {
 ?>
 
 
-	<form method="post" action="sing_in.php">
+	<form method="post" action="sign-in.php">
     	<div>
         	<label for="email"> E-mail Address<?php if (isset($errors['email'])) : ?> <strong>not valid</strong><?php endif; ?><?php if (isset($errors['user-non-existent'])) : ?> <strong>not valid</strong><?php endif; ?></label>   
             <input type="email" id="email" name="required">	
