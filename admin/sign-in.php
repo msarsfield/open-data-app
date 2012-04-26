@@ -25,7 +25,7 @@ $password = filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW);
 
 if($_SERVER ['REQUEST_METHOD'] == "POST") {
 	
-	echo 'works';
+	var_dump($email, $password);
 	if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
 		$errors ['email'] = true;
 	
