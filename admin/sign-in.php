@@ -41,7 +41,7 @@ IF ($_SERVER ['REQUEST_METHOD'] == "POST") {
 		 if(!empty($user)) {
 			if (passwords_match($password, $user ['password'])) {
 				user_sign_in($user['id']);
-				header('Location: inex.php');
+				header('Location: index.php');
 				exit;			
 			} else {
 					$errors['password-no-match'] = true;	
@@ -57,12 +57,12 @@ IF ($_SERVER ['REQUEST_METHOD'] == "POST") {
 
 	<form method="post" action="sing_in.php">
     	<div>
-        	<label for="email"> E-mail Address</label>   
+        	<label for="email"> E-mail Address<?php if (isset($errors['email'])) : ?> <strong>not valid</strong><?php endif; ?><?php if (isset($errors['user-non-existent'])) : ?> <strong>not valid</strong><?php endif; ?></label>   
             <input type="email" id="email" name="required">	
         </div>
         
         <div>
-        	<label for="password">Password</label>   
+        	<label for="password">Password<?php if (isset($errors['password'])) : ?> <strong>is required</strong><?php endif; ?><?php if (isset($errors['password-no-match'])) : ?> <strong>password doesn't match</strong><?php endif; ?></label>   
             <input type="password" id="password" name="required">	
         </div>
 		<button type="submit">Sign In</button>
