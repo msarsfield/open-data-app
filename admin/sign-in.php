@@ -24,6 +24,8 @@ $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $password = filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW);
 
 if($_SERVER ['REQUEST_METHOD'] == "POST") {
+	
+	echo 'works';
 	if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
 		$errors ['email'] = true;
 	
@@ -35,7 +37,7 @@ if($_SERVER ['REQUEST_METHOD'] == "POST") {
 			}
 
 	if (empty($errors)) {
-		echo 'works';
+		
 		 $user = user_get($db, $email);
 		 
 		 if(!empty($user)) {
