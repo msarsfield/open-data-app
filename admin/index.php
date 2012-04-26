@@ -15,7 +15,7 @@
 
 require_once '../includes/users.php';
 	if (!user_signed_in()) {
-	header('Location: ../includes/sign-in.php');
+	header('Location: sign-in.php');
 	exit;
 }
 
@@ -37,7 +37,7 @@ $results = $db->query('
 </head>
 <body>
 	
-    <a href="../includes/sign-out.php">Sign Out</a>
+    <a href="sign-out.php">Sign Out</a>
     
     <a href="add.php">Add a Garden</a>
     
