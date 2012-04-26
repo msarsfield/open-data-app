@@ -9,6 +9,12 @@
   *version 1.0.0
   */
 
+require_once '../includes/users.php';
+	if (!user_signed_in()) {
+	header('Location: sign-in.php');
+	exit;
+}
+
 $errors = array();
 
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);

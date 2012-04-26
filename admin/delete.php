@@ -9,7 +9,11 @@
   *@license New BSD License <https://github.com/msarsfield/open-data-app/blob/master/copyright_license.txt>
   *version 1.0.0
   */
-
+require_once '../includes/users.php';
+	if (!user_signed_in()) {
+	header('Location: sign-in.php');
+	exit;
+}
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
