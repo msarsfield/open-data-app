@@ -58,12 +58,12 @@ IF ($_SERVER ['REQUEST_METHOD'] == "POST") {
 	<form method="post" action="sign-in.php">
     	<div>
         	<label for="email"> E-mail Address<?php if (isset($errors['email'])) : ?> <strong>not valid</strong><?php endif; ?><?php if (isset($errors['user-non-existent'])) : ?> <strong>not valid</strong><?php endif; ?></label>   
-            <input type="email" id="email" name="required">	
+            <input type="email" id="email" name="email">	
         </div>
         
         <div>
         	<label for="password">Password<?php if (isset($errors['password'])) : ?> <strong>is required</strong><?php endif; ?><?php if (isset($errors['password-no-match'])) : ?> <strong>password doesn't match</strong><?php endif; ?></label>   
-            <input type="password" id="password" name="required">	
+            <input type="password" id="password" name="password">	
         </div>
 		<button type="submit">Sign In</button>
         
